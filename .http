@@ -1,0 +1,26 @@
+###################################################
+GET http://localhost:8000/api/products?fields=name,price,quantity HTTP/1.1
+
+###################################################
+GET http://localhost:8000/api/products HTTP/1.1
+
+
+###################################################
+GET http://localhost:8000/api/products/1 HTTP/1.1
+
+###################################################
+POST http://localhost:8000/api/products
+Content-Type: application/json
+Accept-Encoding: UTF-8
+
+{
+    "name": "calça jean",
+    "slug": "calça",
+    "description": "teste calça",
+    "price": 10.43,
+    "quantity": 13,
+    "image":"teste"
+}
+
+###
+DELETE http://localhost:8000/api/products/1 HTTP/1.1
