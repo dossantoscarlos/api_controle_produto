@@ -1,5 +1,9 @@
 ###################################################
 GET http://localhost:8000/api/products?fields=name,price,quantity HTTP/1.1
+Content-Type:application/json
+Accept: application/json
+Authorization: Bearer
+
 
 ###################################################
 GET http://localhost:8000/api/products HTTP/1.1
@@ -24,3 +28,25 @@ Accept-Encoding: UTF-8
 
 ###
 DELETE http://localhost:8000/api/products/1 HTTP/1.1
+
+########
+POST http://localhost:8000/api/login
+Content-Type: application/json
+Accept-Encoding: UTF-8
+
+{
+   "email": "eduardo19@hotmail.com",
+   "password": "carlos10"
+}
+
+########
+POST http://localhost:8000/api/register
+Content-Type: application/json
+Accept-Encoding: UTF-8
+
+{
+    "name": "Carlos Eduardo",
+    "email": "eduardo19@hotmail.com",
+    "password": "carlos10",
+    "password_confirmation": "carlos10"
+}
